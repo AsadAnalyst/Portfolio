@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="main.js" as="script">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#000" />
+  <meta name="description"
+    content="Asad Raza | Portfolio, Visit and know about me & my projects. I value simple content structure, clean design patterns, and thoughtful interactions." />
+  <meta name="keywords"
+    content="Asad Raza,Asad Raza portfolio,Asad Raza Portfolio,AsadRaza,Asad Raza site,Asad Raza Site,Asad Raza me,Asad Raza web,Asad Raza github,AsadRaza site,AsadRaza uiverse,uiverse,Asad Raza uiverse,Asad Raza frontend developer,frontend developer,Asad Raza jaipur,Asad Raza" />
+  <meta name="author" content="Asad Raza" />
+  <meta property="og:image" content="https://www.asadraza.site/src/png/preview-card.png" />
+  <meta property="og:title" content="Asad Raza | Portfolio" />
+  <meta property="og:description"
+    content="Hi! My name is Asad. I'm a web developer. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
+
+  <meta property="og:url" content="https://asadraza.site" />
+  <meta property="og:site_name" content="Asad Raza Portfolio" />
+
+  <meta name="twitter:image:src" content="https://www.asadraza.site/src/png/preview-card.png" />
+  <meta name="twitter:site" content="@Portfolio" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Asad Raza | Portfolio" />
+  <meta name="twitter:description"
+    content="Hi! My name is Asad. I'm a web developer. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
+  <title>Asad Raza | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+  
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  
+  <!-- aos cdn -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"></noscript>
+  
+  <!-- google fonts - load with display swap -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps&display=swap" />
+  <style>
+    /* Existing styles */
+    /* ... */
+
+    /* Tech Stack Styles */
+    .tech-stack {
+      margin: 0.5rem 0;  
+      padding: 0.6rem;   
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tech-stack h4 {
+      margin: 0 0 0.3rem 0;  
+      color: #fff;
+      font-size: 0.95rem;    
+      font-family: 'fira code', monospace;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;  
+    }
+
+    .tech-tag {
+      padding: 0.2rem 0.6rem;  
+      border-radius: 16px;
+      background: rgba(128, 0, 255, 0.2);
+      color: #fff;
+      font-size: 0.8rem;      
+      transition: all 0.3s ease;
+      font-family: 'fira code', monospace;
+      border: 1px solid rgba(128, 0, 255, 0.3);
+    }
+
+    .tech-tag:hover {
+      background: rgba(128, 0, 255, 0.4);
+      transform: translateY(-1px);
+      border-color: #8000ff;
+    }
+
+    .ProjectDescription {
+      margin-bottom: 0.5rem;  
+    }
+
+    /* Light mode styles */
+    body.light-mode .tech-stack {
+      background: rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    body.light-mode .tech-stack h4 {
+      color: #000;
+    }
+
+    body.light-mode .tech-tag {
+      background: rgba(128, 0, 255, 0.1);
+      color: #000;
+      border-color: rgba(128, 0, 255, 0.2);
+    }
+
+    body.light-mode .tech-tag:hover {
+      background: rgba(128, 0, 255, 0.2);
+      color: #000;
+      border-color: rgba(128, 0, 255, 0.4);
+    }
+
+    /* Project box hover effect */
+    .project-box {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-box:hover {
+      transform: scale(1.02);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+
+    /* Light mode adjustments */
+    body.light-mode .project-box:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Make sure links and buttons inside project box remain clickable */
+    .project-box * {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <audio loop="" id="audioPlayer" style="display: none">
+    <source src="src/mp3/preloader.mp3" type="audio/mp3" />
+  </audio>
+  <div id="preloader"></div>
+  <noscript>Allow Javascript</noscript>
+
+  <header>
+    <div class="cursor-inner" id="cursor-inner"></div>
+    <div class="cursor-outer" id="cursor-outer"></div>
+
+    <div class="navbar" id="navbar">
+      <div class="hey">Asad Raza!</div>
+      <div class="logo" tabindex="0" aria-label="Asad Raza logo">
+        <div class="logo-top">
+          <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar" loading="lazy" />
+        </div>
+      </div>
+      <div class="navbar-tabs" id="navbar-tabs">
+        <ul class="navbar-tabs-ul">
+          <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+            <a href="#home" tabindex="0" aria-label="Home menu button">
+              &#60;/Home&#62;
+            </a>
+          </li>
+
+          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+            <a href="#about" aria-label="about menu button">
+              &#60;/AboutMe&#62;
+            </a>
+          </li>
+
+          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+            <a href="#skills" aria-label="skills menu button">
+              &#60;/Skills&#62;
+            </a>
+          </li>
+
+          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+            <a href="#projects" aria-label="projects menu button">
+              &#60;/Projects&#62;
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- navbar tabs ends -->
+    </div>
+  </header>
+  <!-- header ends here -->
+
+  <main>
+    <!-- hamburger -->
+    <div class="hamburger" id="hamburger" data-aos="fade">
+      <div class="hamburgerbase">
+        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
+          <span class="burger-bar" id="burger-bar1"></span>
+          <span class="burger-bar" id="burger-bar2"></span>
+          <span class="burger-bar" id="burger-bar3"></span>
+        </button>
+      </div>
+    </div>
+    <!-- hamburger -->
+    <div class="mobiletogglemenu" id="mobiletogglemenu">
+      <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
+        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
+          <a href="#home" tabindex="0" aria-label="Home menu button">
+            &#60;/Home&#62;
+          </a>
+        </li>
+
+        <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
+          <a href="#about" tabindex="0" aria-label="about menu button">
+            &#60;/AboutMe&#62;
+          </a>
+        </li>
+        <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
+          <a href="#skills" tabindex="0" aria-label="skills menu button">
+            &#60;/Skills&#62;
+          </a>
+        </li>
+        <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
+          <a href="#projects" tabindex="0" aria-label="projects menu button">
+            &#60;/Projects&#62;
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- mobile toggle menu ends -->
+
+    <section class="landing-page-container" id="home">
+      <div class="blob"></div>
+
+      <div class="text-content">
+        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
+          <p class="jello">H</p>
+          <p class="jello">e</p>
+          <p class="jello">l</p>
+          <p class="jello">l</p>
+          <p class="jello">o</p>
+          <p class="jello">(</p>
+          <p class="jello">)</p>
+          <p class="jello">;</p>
+          &nbsp;
+          <p class="jello">I</p>
+          <p class="jello">'</p>
+          <p class="jello">m</p>
+        </article>
+        <article id="name" data-aos="fade-up" data-aos-delay="200">
+          <p class="jello">A</p>
+          <p class="jello">s</p>
+          <p class="jello">a</p>
+          <p class="jello">d</p>
+          &nbsp;
+          <p class="jello">R</p>
+          <p class="jello">a</p>
+          <p class="jello">z</p>
+          <p class="jello">a</p>
+          <p class="jello">.</p>
+        </article>
+
+        <article id="work" data-aos="fade-up" data-aos-delay="400">
+          <h1>
+            I'm a
+            <span class="txt-rotate" data-period="2000"
+              data-rotate='[ "Software Engineer.","Technology Enthusiast.","Computer Scientist."]'></span>
+          </h1>
+        </article>
+        <!-- <p id="info-para" data-aos="fade-up" data-aos-delay="600">
+          Passionate about robust software architecture and seamless user experiences. I believe in the power of code to build a better digital world.
+        </p> -->
+        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
+          <a href="mailto:syed0055asad0@gmail.com" tabindex="-1">
+            <button class="letsTalkBtn">
+              <p class="letsTalkBtn-text">Let's Talk!</p>
+              <span class="letsTalkBtn-BG"></span>
+            </button></a>
+          <div class="setting-container" id="setting-container">
+            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
+
+            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
+              aria-label="settings for sound and appearance"></label>
+
+            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
+              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
+              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
+                aria-label="switch appearance"></label>
+            </div>
+
+            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
+              <input type="checkbox" id="switchforsound" onclick="playpause()" />
+              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
+                class="needtobeinvert"></label>
+            </div>
+          </div>
+          <!-- setting div ends -->
+        </div>
+        
+        <!-- contact-btn-div -->
+      </div>
+      <div class="profile-card" id="profileCard" data-aos="fade-up">
+        <img src="src/webp/asad.png" alt="Asad Raza" tabindex="0" aria-label="image of Asad" />
+      </div>
+      
+      <style>
+        .profile-card {
+          width: 300px;  /* Made it even larger */
+          height: 300px;
+          border-radius: 50%;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: transform 0.3s ease-in-out;
+          box-shadow: 0 0 20px rgba(138, 43, 226, 0.8), 0 0 40px rgba(75, 0, 130, 0.6),
+                      0 0 60px rgba(72, 61, 139, 0.5); 
+          animation: glow 1.5s infinite alternate;
+        }
+      
+        .profile-card img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      
+        /* Zoom effect on hover */
+        .profile-card:hover {
+          transform: scale(1.3); /* Now the whole card zooms by 30% */
+        }
+      
+        @keyframes glow {
+          0% {
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.8), 0 0 40px rgba(75, 0, 130, 0.6),
+                        0 0 60px rgba(72, 61, 139, 0.5);
+          }
+          100% {
+            box-shadow: 0 0 30px rgba(138, 43, 226, 1), 0 0 50px rgba(75, 0, 130, 0.8),
+                        0 0 70px rgba(72, 61, 139, 0.7);
+          }
+        }
+      </style>
+      
+      
+    </section>
+    <!-- landing page ends here -->
+    <section class="about-section-container" id="about" data-aos="fade-up">
+      <div class="about-section">
+        <div class="section-heading">
+          <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
+            &#60;/AboutMe&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+
+        <div class="info-dp-section">
+          <div class="about-info">
+            <p tabindex="0">
+              Hi! I'm Asad, a Computer Scientists with hands-on experience, skilled in designing and implementing scalable and efficient software solutions. Proficient in Python, C, C++, and C#, with a strong focus on writing optimized, maintainable, and performance-driven code. Recognized for problem-solving skills and expertise in data structures, algorithms, and UML design. Passionate about exploring cutting-edge technologies and delivering high-quality solutions tailored to client needs. 
+              <br><br>
+              My commitment to the tech community shines through my involvement in collaborative projects, CS meetups,
+              and networking opportunities. I believe in the power of collaboration to drive meaningful innovation in
+              the digital age.
+            </p>
+            <br />
+            <!-- Resume button -->
+            <button class="resume-btn" id="resume-btn" onclick="openURL()">
+              <div class="sign">
+                <svg viewBox="0 0 640 512">
+                  <path
+                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+                </svg>
+              </div>
+
+              <div class="text">Resume</div>
+            </button>
+            
+          </div>
+
+          <div class="dp" data-aos="fade-up">
+            <img src="src/webp/asad.png" alt="Asad Raza" tabindex="0" aria-label="image of Asad" />
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- about section ends  -->
+
+    <section class="skills-section-container" id="skills">
+      <div class="skills-section">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
+            &#60;/Skills&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+
+        <div class="frontend-dev-section">
+          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
+            aria-label="As a frontend a developer these are the skills i have">
+            Tech Stack
+          </h3>
+          <ul class="tech-stack-wrapper">
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
+              <span class="tooltip">HTML</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
+              <span class="tooltip">CSS</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
+              <span class="tooltip">JS</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/bootstraplogo.png" alt="bootstrap skill" class="tech-stack-logo" />
+              <span class="tooltip">BOOTSTRAP</span>
+            </li>
+
+            <!-- <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/nodejs.png" alt="node skill" class="tech-stack-logo" />
+              <span class="tooltip">NODEJS</span>
+            </li> -->
+
+            <!-- <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/reactlogo.png" alt="react skill" class="tech-stack-logo" />
+              <span class="tooltip">REACT</span>
+            </li> -->
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
+              <span class="tooltip">GITHUB</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
+              <span class="tooltip">GIT</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/clogo.png" alt="c language skill" class="tech-stack-logo" />
+              <span class="tooltip">C</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/cpplogo.png" alt="c++ language skill" class="tech-stack-logo" />
+              <span class="tooltip">C++</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/python.png" alt="python skill" class="tech-stack-logo" />
+              <span class="tooltip">PYTHON</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/jupyter.png" alt="Jupyter skill" class="tech-stack-logo" />
+              <span class="tooltip">JUPYTER</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/Azure SQL Database.png" alt="sql skill" class="tech-stack-logo" />
+              <span class="tooltip">SQL</span>
+            </li>
+
+            <!-- <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/Mongodb-PNG-Image-HD.png" alt="monogdb skill" class="tech-stack-logo" />
+              <span class="tooltip">MONGO DB</span>
+            </li> -->
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/mysql-logo-1.png" alt="mysql skill" class="tech-stack-logo" />
+              <span class="tooltip">MYSQL</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- skills section ends -->
+    <section class="projects-section-container" id="projects">
+      <div class="projects-section-div">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
+            &#60;/Projects&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+        <div class="project-boxes-div">
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <article class="ProjectHeading">WhatsApp Clone</article>
+                <p class="ProjectDescription">
+                  A P2P messenger enabling direct user communication without a central server, using WebRTC for real-time interaction. It ensures secure messaging with encryption and supports text, file sharing, and voice messaging.
+                </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">Javascript</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">WebRTC</span>
+                    <!-- <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Terraform</span> -->
+                    <span class="tech-tag">Git</span>
+                  </div>
+                </div>
+                <div class="project-buttons">
+                  <a href="https://github.com/AsadAnalyst/WhatsApp-Clone" target="_blank"
+                    class="github-redirect" aria-label="Visit on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/WhatsAppCloneApp.png" alt="WhatsApp Clone Application preview image" />
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <article class="ProjectHeading" >Election Management System</article>
+                <p class="ProjectDescription">
+                  Desktop application for comprehensive Election data management. Features role-based access control.
+                </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">.NET Framework</span>
+                    <span class="tech-tag">Oracle DB</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">PL/SQL</span>
+                  </div>
+                </div>
+                <div class="project-buttons">
+                  <a href="https://github.com/AsadAnalyst/Election-Management-System-" target="_blank"
+                    class="github-redirect" aria-label="Visit on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/SMS-img.png" alt="Election Management System preview image" />
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box5" id="project-box5">
+              <div class="info-div">
+                <article class="ProjectHeading">DODGE-EM-Game</article>
+                <p class="ProjectDescription">
+                  Console-based implementation The player drives a brown car to collect rewards while avoiding blue opponent cars in a racing arena. Collisions reduce lives, refill rewards, and the score and lives are shown on the screen.
+                </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Console-based</span>
+                    <span class="tech-tag">Data Structures</span>
+                    <span class="tech-tag">Algorithms</span>
+                  </div>
+                </div>
+                <div class="project-buttons">
+                  <a href="https://github.com/AsadAnalyst/DODGE-EM-Car-Game" target="_blank" class="github-redirect"
+                    aria-label="Visit on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/DODGE-EM.png" alt="DODGE-EM Game preview image" />
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <article class="ProjectHeading">Gym Analysis and Tracking</article>
+                <p class="ProjectDescription">
+                  This dataset includes 12 variable and 879 values of gym members exercise routines, physical attributes, and fitness metrics, such as heart rate, calories burned, and workout duration.it allows for comprehensive analysis of fitness patterns, athlete progression, and health trends.
+                </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">R</span>
+                    <span class="tech-tag">Google Colab</span>
+                    <span class="tech-tag">Analysis</span>
+                    <span class="tech-tag">Graphs</span>
+                    <span class="tech-tag">Charts</span>
+                  </div>
+                </div>
+                <div class="project-buttons">
+                  <a href="https://github.com/AsadAnalyst/Gym-Analysis-and-Tracking" target="_blank"
+                    class="github-redirect" aria-label="Visit on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/gym.png" alt="Gym Analysis and Tracking preview image" />
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
+              <div class="info-div">
+                <article class="ProjectHeading">Autonomous Delivery Robot</article>
+                <p class="ProjectDescription">
+                  Advanced pathfinding robot simulation with real-time obstacle avoidance. Features dynamic path recalculation, efficiency optimization, and interactive visualization of robot navigation.
+                </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pygame</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">A* Algorithm</span>
+                    <span class="tech-tag">Path Planning</span>
+                  </div>
+                </div>
+                <div class="project-buttons">
+                  <a href="https://github.com/AsadAnalyst/Autonomous-Delivery-Robot" target="_blank" class="github-redirect"
+                    aria-label="Visit on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/ADR.png" alt="Autonomous Delivery Robot preview image" />
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box5" id="project-box5">
+              <div class="info-div">
+                <article class="ProjectHeading">Dictionary</article>
+                <p class="ProjectDescription">
+                  Console-based Dictionary. Features include efficient text storage, intelligent word suggestions based on a pre-defined dictionary using trie-based data structures, and customizable font sizes.
+                </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Data Structures</span>
+                    <span class="tech-tag">Algorithms</span>
+                    <span class="tech-tag">Trie Trees</span>
+                    <span class="tech-tag">Stack</span>
+                  </div>
+                </div>
+                <div class="project-buttons">
+                  <a href="https://github.com/AsadAnalyst/Success-Grammatic-Dictionary-" target="_blank" class="github-redirect"
+                    aria-label="Visit on GitHub">
+                    <img src="src/svg/github.svg" alt="github redirect button" />
+                  </a>
+                </div>
+              </div>
+              <div class="image-div">
+                <img src="src/webp/dictionary.png" alt="Success-Grammatic-Dictionary preview image" />
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------- -->
+
+          <!-- ---------------------- -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- main ends here -->
+
+  <footer id="footer">
+    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
+      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
+    </button>
+    <div class="footer-background">
+      <div class="footer-blob"></div>
+    </div>
+    <div class="footer-foreground">
+      <div class="footercontainer">
+        <!-- <div class="two-words">
+          <article tabindex="0" aria-label="Learning, Living, and Leveling Up, my quote">
+            "Learning, Living, and Leveling Up."
+          </article>
+        </div> -->
+        <div class="social-media-container">
+          <div class="getintouch-heading">
+            <article>GetinTouch();</article>
+          </div>
+          <div class="logos">
+            <a href="https://www.instagram.com/syed___asad_/" target="_blank" tabindex="0" aria-label="My instagram">
+              <svg viewBox="0 0 448 512" class="SocialHandle">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg></a>
+
+            <a href="https://www.linkedin.com/in/syed-asad-raza-188421322/" target="_blank" aria-label="My Linkdin"><svg
+                class="SocialHandle" viewBox="0 0 448 512">
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+              </svg></a>
+
+            <a href="https://github.com/AsadAnalyst" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
+                class="SocialHandle">
+                <path
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+              </svg></a>
+
+            <a href="mailto:syed0055asad0@gmail.com" target="_blank" aria-label="My G mail"><svg
+                id="GmailLogo" viewBox="0 0 512 512">
+                <path
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-avatar-container">
+          <img src="src/png/footer-avatar-asad.png" alt="animation-head" class="footer-avatar-img"
+            id="footer-wala-avatar" />
+          <div class="footer-avatar-face">
+            <div class="footer-avatar-eye footer-left-eye">
+              <div class="footer-pupil"></div>
+            </div>
+            <div class="footer-avatar-eye footer-right-eye">
+              <div class="footer-pupil"></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <article>
+            Design & Built by Asad Raza
+            &#169; 2025
+          </article>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer ends here -->
+
+  <script src="main.js" defer></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <script>
+    window.addEventListener('load', function() {
+      AOS.init();
+    });
+  </script>
+
+  <script>
+    function openURL() {
+      var url = "src/pdf/Asad Raza Resume.pdf";
+      window.open(url, "_blank");
+    }
+  </script>
+
+  <script>
+    const cursorInner = document.getElementById("cursor-inner");
+    const cursorOuter = document.getElementById("cursor-outer");
+    const links = document.querySelectorAll("a,label,button");
+
+    document.addEventListener("mousemove", function (e) {
+      const posX = e.clientX;
+      const posY = e.clientY;
+
+      cursorInner.style.left = `${posX}px`;
+      cursorInner.style.top = `${posY}px`;
+
+      cursorOuter.style.left = `${posX}px`;
+      cursorOuter.style.top = `${posY}px`;
+
+      cursorOuter.animate(
+        {
+          left: `${posX}px`,
+          top: `${posY}px`,
+        },
+        { duration: 500, fill: "forwards" }
+      );
+
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          cursorInner.classList.add("hover");
+          cursorOuter.classList.add("hover");
+        });
+        link.addEventListener("mouseleave", () => {
+          cursorInner.classList.remove("hover");
+          cursorOuter.classList.remove("hover");
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
