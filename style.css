@@ -1918,6 +1918,8 @@ footer {
     .profile-card {
         order: 2;
         margin-top: -22rem;
+        margin-left: 10rem;
+
     }
 
     #hello-friend, #name, #work {
