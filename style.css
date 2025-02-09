@@ -2003,6 +2003,12 @@ footer {
         width: 200px
     }
 
+    .profile-card img {
+        height: 200px;
+        width: 200px
+        
+    }
+
     .two-words {
         height: 50px
     }
