@@ -1,4 +1,4 @@
-svar audio = document.getElementById("audioPlayer"),
+asvar audio = document.getElementById("audioPlayer"),
   loader = document.getElementById("preloader");
 function settingtoggle() {
   document
