@@ -1,4 +1,4 @@
-sasaaddaasvar audio = document.getElementById("audioPlayer"),
+asasaaddaasvar audio = document.getElementById("audioPlayer"),
   loader = document.getElementById("preloader");
 function settingtoggle() {
   document
