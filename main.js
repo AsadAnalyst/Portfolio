@@ -1,4 +1,4 @@
-sdvar audio = document.getElementById("audioPlayer"),
+dsdvar audio = document.getElementById("audioPlayer"),
   loader = document.getElementById("preloader");
 function settingtoggle() {
   document
