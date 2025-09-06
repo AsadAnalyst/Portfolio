@@ -1,10 +1,9 @@
-xvar audio = document.getElementById("audioPlayer"),
+dxvar audio = document.getElementById("audioPlayer"),
   loader = document.getElementById("preloader");
 function settingtoggle() {
   document
     .getElementById("setting-container")
     .classList.toggle("settingactivate"),
-    document
       .getElementById("visualmodetogglebuttoncontainer")
       .classList.toggle("visualmodeshow"),
     document
