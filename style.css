@@ -1143,6 +1143,60 @@ noscript {
     text-decoration: underline
 }
 
+.awards-section-container {
+    padding-top: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.awards-section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.award-card {
+    width: 100%;
+    margin-top: 45px;
+    padding: 28px;
+    border-radius: 24px;
+    border: 1px solid var(--tech-stack-box-border-color);
+    background-image: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
+    display: flex;
+    flex-direction: column;
+    gap: 14px
+}
+
+.award-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap
+}
+
+.award-title {
+    color: var(--color-white);
+    font-size: 2.3rem;
+    font-weight: 700
+}
+
+.award-date {
+    color: var(--color-light-blue);
+    font-size: 1.5rem;
+    font-weight: 600
+}
+
+.award-description {
+    color: var(--color-ddd-color);
+    font-size: 1.55rem;
+    line-height: 1.7
+}
+
 .language-speak,
 .tech-stack-wrapper {
     width: 100%;
@@ -1724,6 +1778,7 @@ footer {
     }
 
     .projects-section-div,
+    .awards-section,
     .experience-section,
     .skills-section,
     .text-content {
@@ -2149,6 +2204,7 @@ footer {
     }
 
     .about-section,
+    .awards-section,
     .experience-section,
     .projects-section-div,
     .skills-section {
