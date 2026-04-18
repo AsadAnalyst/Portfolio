@@ -133,6 +133,44 @@ const mouseMove = (e) => {
 window.addEventListener("mousemove", mouseMove),
   window.addEventListener("resize", windowResize);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".project-filter-btn");
+  const projectGroups = document.querySelectorAll(".project-category-group");
+
+  if (!filterButtons.length || !projectGroups.length) {
+    return;
+  }
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const filterValue = this.getAttribute("data-filter");
+
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
+
+      projectGroups.forEach((group) => {
+        const categoryValue = group.getAttribute("data-category");
+        const shouldShow =
+          filterValue === "all" || filterValue === categoryValue;
+
+        if (shouldShow) {
+          group.style.display = "flex";
+          group.classList.add("aos-animate");
+          group.querySelectorAll("[data-aos]").forEach((element) => {
+            element.classList.add("aos-animate");
+          });
+        } else {
+          group.style.display = "none";
+        }
+      });
+
+      if (window.AOS && typeof window.AOS.refreshHard === "function") {
+        window.AOS.refreshHard();
+      }
+    });
+  });
+});
+
 var TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
