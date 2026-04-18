@@ -1650,6 +1650,14 @@ footer {
     width: 60%
 }
 
+.social-text-link {
+    color: #fff;
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: .2px;
+    line-height: 1
+}
+
 #GmailLogo {
     height: 70%
 }
