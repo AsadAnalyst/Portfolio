@@ -2590,3 +2590,160 @@ body.light-mode .project-status { color: #176b78; }
         transition-duration: .01ms !important;
     }
 }
+
+/* Responsive layout refinements for phones, tablets, and wide desktop screens. */
+html {
+    font-size: clamp(8px, calc(7px + .22vw), 10px);
+    scroll-padding-top: 9rem;
+}
+
+img, video, iframe { max-width: 100%; }
+
+.about-section,
+.skills-section,
+.experience-section,
+.awards-section {
+    width: min(112rem, 88%);
+}
+
+.experience-card,
+.award-card { min-width: 0; }
+
+.experience-role,
+.award-title,
+.ProjectHeading,
+.ProjectDescription,
+.experience-description,
+.outfitorbit-role { overflow-wrap: anywhere; }
+
+.project-box,
+.project-box-wrapper,
+.info-div,
+.image-div { min-width: 0; }
+
+.project-box { height: 36rem; }
+
+@media (max-width: 1024px) {
+    .landing-page-container { gap: 2rem; }
+    .text-content { width: min(58%, 72rem); }
+    .profile-card { width: min(26rem, 32vw); margin-right: 2rem; }
+    .about-section,
+    .skills-section,
+    .experience-section,
+    .awards-section,
+    .projects-section-div { width: min(92%, 100rem); }
+    .info-div { padding-left: 2.4rem; padding-right: 2.4rem; }
+    .project-box { height: auto; min-height: 0; flex-direction: column; }
+    .project-box .info-div,
+    .project-box .image-div { width: 100%; height: auto; }
+    .project-box .image-div { padding: 0 3rem 3rem; }
+    .project-box .image-div img { width: 100%; height: auto; max-height: 40rem; object-fit: contain; }
+    .skillify-preview { width: 100%; height: auto; justify-content: center; padding: 0 3rem 3rem; }
+    .outfitorbit-card .info-div { width: 100%; }
+    .outfitorbit-art { width: 100%; height: auto; min-height: 0; }
+}
+
+@media (max-width: 760px) {
+    html { scroll-padding-top: 7.5rem; }
+
+    .hamburger { height: 8rem; align-items: center; }
+    .hamburgerbase { width: min(92%, 70rem); height: 8rem; padding: 1rem; }
+    #hamburger-button { width: 4.8rem; height: 4.4rem; padding: .5rem; }
+
+    .mobile-navbar-tabs-ul {
+        gap: clamp(2rem, 5vh, 4rem);
+        padding: 8rem 2rem 3rem;
+        overflow-y: auto;
+    }
+
+    .mobile-navbar-tabs-li { min-height: 4.4rem; }
+    .mobile-navbar-tabs-li a { display: flex; min-height: 4.4rem; align-items: center; }
+
+    .landing-page-container {
+        width: 100%;
+        height: auto;
+        min-height: 100svh;
+        gap: 2rem;
+        padding: 10rem 2.4rem 5rem;
+    }
+
+    .text-content { width: min(100%, 68rem); padding: 0; }
+    .hero-intro { max-width: 60rem; }
+    .contact-btn-div { height: auto; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; }
+    .profile-card { order: 2; width: min(22rem, 48vw); margin: 1rem auto 0; }
+
+    .about-section-container,
+    .skills-section-container,
+    .experience-section-container,
+    .awards-section-container,
+    .projects-section-container { padding-top: 8rem; padding-bottom: 2rem; }
+
+    .about-section,
+    .skills-section,
+    .experience-section,
+    .awards-section,
+    .projects-section-div { width: min(92%, 66rem); }
+
+    .section-heading { align-items: flex-start; }
+    .section-heading-article { font-size: clamp(2.4rem, 5vw, 3.2rem); }
+    .sectionHeadingP { flex: 1; min-width: 2rem; }
+    .about-info p { line-height: 1.75; }
+    .info-dp-section { gap: 2rem; }
+
+    .project-filter {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: .5rem .2rem 1rem;
+        scroll-snap-type: x proximity;
+    }
+
+    .project-filter-btn { flex: 0 0 auto; min-height: 4.4rem; scroll-snap-align: start; }
+    .project-category-group { gap: 1.6rem; }
+    .project-box { height: auto; min-height: 0; flex-direction: column; border-radius: 1.8rem; }
+    .project-box:hover { transform: none; }
+    .project-boxes-div { padding: 2rem 0; }
+    .info-div { gap: 1.4rem; }
+    .image-div { height: auto; padding: 0 2.4rem 2.4rem; }
+    .image-div img { display: block; width: 100%; height: auto; max-height: 34rem; object-fit: contain; border-radius: 1rem; }
+    .skillify-preview { padding: 0 2.4rem 2.4rem; }
+    .outfitorbit-card { min-height: 0; }
+    .outfitorbit-card .info-div { padding: 2.4rem; }
+    .outfitorbit-art { min-height: 0; padding: 1.6rem; }
+    .outfitorbit-art img { width: min(100%, 28rem); }
+
+    .experience-card,
+    .award-card { margin-top: 2.4rem; padding: 2.2rem; border-radius: 1.8rem; }
+    .experience-card-header,
+    .award-card-header { flex-direction: column; gap: .8rem; }
+    .experience-role { font-size: 2.1rem; }
+    .experience-description,
+    .experience-project,
+    .award-description { line-height: 1.65; }
+    .tech-stack-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1.2rem; }
+    .tech-stack-box { width: auto; height: auto; min-height: 12rem; }
+
+    .footer-background,
+    .footer-foreground { min-height: 72rem; height: 100svh; }
+    .footer-foreground { padding: 2rem 1.6rem; }
+    .footer-avatar-container { width: min(20rem, 48vw); }
+    .logos { gap: clamp(1rem, 3vw, 2.4rem); }
+    .social-media-container a { width: 5.2rem; height: 5.2rem; }
+    .footer-bottom { min-height: 7rem; height: auto; padding: 1.6rem; text-align: center; }
+}
+
+@media (max-width: 420px) {
+    .landing-page-container { padding-right: 1.8rem; padding-left: 1.8rem; }
+    #hello-friend { font-size: 2.8rem; }
+    #name { font-size: clamp(3.4rem, 12vw, 4.4rem); }
+    #work { font-size: clamp(3.4rem, 11vw, 4.2rem); }
+    .hero-intro { font-size: 1.6rem; }
+    .contact-btn-div { align-items: flex-start; }
+    .letsTalkBtn { min-height: 4.6rem; }
+    .project-filter-btn { padding: .9rem 1.4rem; }
+    .tech-tags { gap: .6rem; }
+    .tech-tag { padding: .3rem .8rem; font-size: 1.2rem; }
+    .experience-project a { display: inline-block; margin-top: .4rem; }
+    .two-words article { text-align: center; font-size: 2rem; }
+    .outfitorbit-role { font-size: 1.3rem; }
+}
