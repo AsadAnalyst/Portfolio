@@ -2462,6 +2462,113 @@ body {
 
 .skillify-live-link span { color: var(--color-light-blue); font-size: 1.8rem; }
 
+.outfitorbit-card {
+    height: auto;
+    min-height: 39rem;
+}
+
+.outfitorbit-card .info-div {
+    width: 58%;
+    height: auto;
+    align-items: flex-start;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+}
+
+.outfitorbit-role {
+    color: #c1c0ce;
+    font-size: 1.4rem;
+    line-height: 1.65;
+}
+
+.outfitorbit-role strong { color: #f5f3ff; }
+
+.outfitorbit-blog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1.1rem 1.6rem;
+    border: 1px solid rgba(167, 139, 250, .4);
+    border-radius: 999px;
+    color: #f5f3ff;
+    background: rgba(124, 58, 237, .2);
+    font-size: 1.4rem;
+    font-weight: 650;
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.outfitorbit-blog-link:hover {
+    transform: translateY(-2px);
+    background: rgba(124, 58, 237, .38);
+    border-color: var(--color-light-blue);
+}
+
+.outfitorbit-blog-link span { color: var(--color-light-blue); font-size: 1.8rem; }
+
+.outfitorbit-art {
+    position: relative;
+    display: flex;
+    width: 42%;
+    min-height: 39rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 55% 45%, rgba(225, 29, 72, .28), transparent 42%),
+                linear-gradient(140deg, #171523, #282039 65%, #151420);
+}
+
+.orbit-ring {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid rgba(251, 113, 133, .16);
+    border-radius: 50%;
+    transform: rotate(-24deg) scaleY(.44);
+}
+
+.orbit-ring-one { width: 36rem; height: 36rem; }
+
+.orbit-ring-two {
+    width: 27rem;
+    height: 27rem;
+    border-color: rgba(253, 186, 116, .22);
+    transform: rotate(28deg) scaleY(.48);
+}
+
+.orbit-label,
+.orbit-outfit {
+    z-index: 1;
+    color: #fda4af;
+    font-family: "Fira Code", monospace;
+    font-size: 1.05rem;
+    letter-spacing: .16em;
+}
+
+.outfitorbit-mark {
+    z-index: 1;
+    color: #fff7ed;
+    font-size: clamp(8rem, 13vw, 13rem);
+    font-weight: 800;
+    letter-spacing: -.14em;
+    line-height: 1;
+    text-shadow: 0 0 5rem rgba(251, 113, 133, .38);
+}
+
+.outfitorbit-mark span { color: #fb7185; }
+
+.orbit-outfit {
+    padding: .8rem 1.2rem;
+    border: 1px solid rgba(253, 186, 116, .3);
+    border-radius: 999px;
+    color: #fed7aa;
+    letter-spacing: .1em;
+}
+
+.orbit-outfit span { color: #fb7185; }
+
 .skillify-preview {
     display: flex;
     width: 45%;
@@ -2491,6 +2598,10 @@ body.light-mode .ProjectDescription { color: #555267; }
 
 body.light-mode .skillify-live-link { color: #30264e; }
 
+body.light-mode .outfitorbit-role { color: #555267; }
+
+body.light-mode .outfitorbit-role strong { color: #30264e; }
+
 body.light-mode .project-status { color: #176b78; }
 
 @media (max-width: 760px) {
@@ -2502,9 +2613,13 @@ body.light-mode .project-status { color: #176b78; }
     .info-div { padding: 2.4rem; }
     .image-div { padding: 0 0 0 2.4rem; height: 24rem; }
     .image-div img { height: 100%; width: 100%; object-fit: cover; }
-    .skillify-card .info-div, .skillify-preview { width: 100%; }
+    .skillify-card .info-div, .skillify-preview,
+    .outfitorbit-card .info-div, .outfitorbit-art { width: 100%; }
     .skillify-card .info-div { order: 1; }
     .skillify-preview { height: auto; padding: 0 2.4rem 2.4rem; order: 2; }
+    .outfitorbit-card { min-height: 0; }
+    .outfitorbit-card .info-div { order: 1; }
+    .outfitorbit-art { min-height: 25rem; order: 2; }
     .profile-card { width: min(22rem, 65vw); margin: 2rem auto; }
 }
 
