@@ -17,7 +17,7 @@ fhxDrd<!DOCTYPE html>
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#000" />
   <meta name="description"
-    content="Asad Raza | Portfolio, Visit and know about me & my projects. I value simple content structure, clean design patterns, and thoughtful interactions." />
+    content="Asad Raza is a full-stack developer building thoughtful web, mobile, and AI-powered products. Explore selected projects and get in touch." />
   <meta name="keywords"
     content="Asad Raza,Asad Raza portfolio,Asad Raza Portfolio,AsadRaza,Asad Raza site,Asad Raza Site,Asad Raza me,Asad Raza web,Asad Raza github,AsadRaza site,AsadRaza uiverse,uiverse,Asad Raza uiverse,Asad Raza frontend developer,frontend developer,Asad Raza jaipur,Asad Raza" />
   <meta name="author" content="Asad Raza" />
@@ -298,6 +298,9 @@ fhxDrd<!DOCTYPE html>
               data-rotate='[ "Software Engineer.","Technology Enthusiast.","Computer Scientist."]'></span>
           </h1>
         </article>
+        <p class="hero-intro" data-aos="fade-up" data-aos-delay="600">
+          I build useful digital products across web, mobile, and AI — from the first idea to a polished experience.
+        </p>
         <!-- <p id="info-para" data-aos="fade-up" data-aos-delay="600">
           Passionate about robust software architecture and seamless user experiences. I believe in the power of code to build a better digital world.
         </p> -->
@@ -674,6 +677,35 @@ fhxDrd<!DOCTYPE html>
         <div class="project-boxes-div">
           <div class="project-category-group" data-aos="fade-up" data-category="full-stack">
             <h3 class="project-category-title">Full Stack Projects</h3>
+
+            <div data-aos="fade-up" class="project-box-wrapper">
+              <article class="project-box skillify-card" aria-labelledby="skillify-title">
+                <div class="info-div">
+                  <div class="project-status"><span aria-hidden="true"></span> Live project</div>
+                  <h4 class="ProjectHeading" id="skillify-title">Skillify</h4>
+                  <p class="ProjectDescription">
+                    A service marketplace connecting people with trusted providers for home services, web design, and app development. Explore skilled professionals and find the right help for your next project.
+                  </p>
+                  <div class="tech-stack">
+                    <h4>🛠️ Tech Stack</h4>
+                    <div class="tech-tags">
+                      <span class="tech-tag">Next.js</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Neon</span>
+                      <span class="tech-tag">JWT</span>
+                    </div>
+                  </div>
+                  <div class="project-buttons">
+                    <a class="skillify-live-link" href="https://skillify-teal.vercel.app/" target="_blank" rel="noopener noreferrer">
+                      View live project <span aria-hidden="true">↗</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="skillify-preview">
+                  <img src="src/webp/skillify-preview.png" alt="Preview of Skillify, a platform for finding skilled people for home and online services" loading="lazy" />
+                </div>
+              </article>
+            </div>
 
             <div data-aos="fade-up" class="project-box-wrapper">
               <div class="project-box project-box2" id="project-box2">
@@ -1112,7 +1144,7 @@ Built with Expo and EAS Build, it's designed for bilingual vocabulary growth and
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
   <script>
     window.addEventListener('load', function() {
-      AOS.init();
+      AOS.init({ once: true, duration: 650, offset: 80 });
     });
   </script>
 

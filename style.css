@@ -2326,3 +2326,193 @@ footer {
     object-fit: cover;
     border-radius: 50%;
 }
+
+/* Portfolio polish: calmer motion, clearer hierarchy, and reliable small-screen layouts. */
+:root {
+    --color-purple: #a78bfa;
+    --color-light-purple: #c4b5fd;
+    --color-light-blue: #67e8f9;
+    --tech-stack-box-border-color: rgba(167, 139, 250, .2);
+}
+
+html { scroll-padding-top: 90px; }
+
+body {
+    background-image: radial-gradient(ellipse at 12% 8%, rgba(124, 58, 237, .12), transparent 35%),
+                      radial-gradient(ellipse at 88% 35%, rgba(34, 211, 238, .06), transparent 30%);
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-light-blue);
+    outline-offset: 4px;
+}
+
+.hero-intro {
+    max-width: 56rem;
+    margin-top: 1.6rem;
+    color: var(--color-gray);
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    line-height: 1.7;
+}
+
+.profile-card {
+    width: min(28rem, 34vw);
+    height: auto;
+    aspect-ratio: 1;
+    margin-right: 3rem;
+    animation: none;
+    border: 1px solid rgba(167, 139, 250, .45);
+    box-shadow: 0 20px 65px rgba(124, 58, 237, .2);
+}
+
+.profile-card:hover { transform: translateY(-4px); }
+
+.projects-section-container { padding: 11rem 0; }
+
+.projects-section-div { width: min(112rem, 88%); }
+
+.project-boxes-div {
+    gap: 3.2rem;
+    padding: 3.5rem 0;
+}
+
+.project-category-group { gap: 2rem; }
+
+.project-category-title {
+    font-size: 2.2rem;
+    border-bottom-width: 1px;
+}
+
+.project-box {
+    height: 36rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, rgba(31, 29, 48, .96), rgba(17, 17, 27, .9));
+    border-color: rgba(167, 139, 250, .17);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, .16);
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(103, 232, 249, .45);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, .28);
+}
+
+.info-div { padding: 3rem; gap: 1.6rem; }
+
+.ProjectHeading { font-size: clamp(2.2rem, 3vw, 3.1rem); }
+
+.ProjectDescription { color: #c1c0ce; line-height: 1.7; }
+
+.tech-stack { border-color: rgba(167, 139, 250, .15); }
+
+.tech-tag { line-height: 1.5; }
+
+.image-div { padding-top: 3.5rem; }
+
+.image-div img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top left;
+    border-top-left-radius: 1.5rem;
+}
+
+.skillify-card { min-height: 34rem; }
+
+.skillify-card .info-div { width: 55%; align-items: flex-start; }
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    color: var(--color-light-blue);
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.project-status span {
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    background: #34d399;
+    box-shadow: 0 0 1.2rem rgba(52, 211, 153, .75);
+}
+
+.skillify-live-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1.1rem 1.6rem;
+    border: 1px solid rgba(167, 139, 250, .4);
+    border-radius: 999px;
+    color: #f5f3ff;
+    background: rgba(124, 58, 237, .2);
+    font-size: 1.4rem;
+    font-weight: 650;
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.skillify-live-link:hover {
+    transform: translateY(-2px);
+    background: rgba(124, 58, 237, .38);
+    border-color: var(--color-light-blue);
+}
+
+.skillify-live-link span { color: var(--color-light-blue); font-size: 1.8rem; }
+
+.skillify-preview {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    align-items: center;
+    padding: 2rem;
+}
+
+.skillify-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.95;
+    object-fit: cover;
+    object-position: top;
+    border: 1px solid rgba(196, 181, 253, .28);
+    border-radius: 1.2rem;
+    box-shadow: 0 16px 44px rgba(0, 0, 0, .4);
+}
+
+body.light-mode .project-box {
+    background: linear-gradient(135deg, #fff, #f6f3ff);
+    border-color: rgba(91, 63, 153, .2);
+}
+
+body.light-mode .ProjectDescription { color: #555267; }
+
+body.light-mode .skillify-live-link { color: #30264e; }
+
+body.light-mode .project-status { color: #176b78; }
+
+@media (max-width: 760px) {
+    .projects-section-container { padding: 8rem 0; }
+    .projects-section-div { width: min(92%, 60rem); }
+    .project-boxes-div { gap: 2.4rem; padding: 2.4rem 0; }
+    .project-box { height: auto; min-height: 0; flex-direction: column; }
+    .info-div, .image-div { width: 100%; height: auto; }
+    .info-div { padding: 2.4rem; }
+    .image-div { padding: 0 0 0 2.4rem; height: 24rem; }
+    .image-div img { height: 100%; width: 100%; object-fit: cover; }
+    .skillify-card .info-div, .skillify-preview { width: 100%; }
+    .skillify-card .info-div { order: 1; }
+    .skillify-preview { height: auto; padding: 0 2.4rem 2.4rem; order: 2; }
+    .profile-card { width: min(22rem, 65vw); margin: 2rem auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
